@@ -141,6 +141,15 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Photo list page'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/photosList');
+              },
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

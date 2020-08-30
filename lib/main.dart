@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/CounterPage.dart';
+import 'package:flutter1/PhotosList.dart';
 import 'package:flutter1/SendData.dart';
 import 'package:flutter1/ToDoList.dart';
 import 'package:flutter1/FetchHttp.dart';
@@ -49,6 +50,7 @@ void main() {
             ),
         '/fetchHttp': (context) => FetchHttp(),
         '/sendHttp': (context) => SendDataHttp(),
+        '/photosList': (context) => PhotosListPage(title: 'Photo List Page'),
       },
     ),
   );
