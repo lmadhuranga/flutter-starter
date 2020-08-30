@@ -6,6 +6,7 @@ import 'shopping/product.dart';
 import 'shopping/shopping-list.dart';
 import 'SecondPage.dart';
 import 'HomePage.dart';
+import 'FormPage.dart';
 
 void main() {
   runApp(
@@ -21,18 +22,19 @@ void main() {
       initialRoute: '/', 
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => HomePage(),
+        '/': (context) =>         HomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/second': (context) => SecondScreen(),
-        '/tabs': (context) => TabsPage(),
-        '/counter': (context) => CounterPage(),
+        '/second': (context) =>   SecondScreen(),
+        '/tabs': (context) =>     TabsPage(),
+        '/counter': (context) =>  CounterPage(),
         '/shoppinglist': (context) => ShoppingList(
-              products: <Product>[
+              products: <Product> [
                 Product(name: 'Eggs'),
                 Product(name: 'Flour'),
                 Product(name: 'Chocolate chips'),
               ],
             ),
+        '/form': (context) =>     FormPage(),
       },
 
     ),

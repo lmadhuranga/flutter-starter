@@ -106,6 +106,15 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Form Page'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/form');
+              },
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
