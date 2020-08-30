@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'showDialog.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -115,6 +114,33 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Todo List'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/todo');
+              },
+            ),
+          ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Http Fetch Data'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/fetchHttp');
+              },
+            ),
+          ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Http Send Data'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/sendHttp');
+              },
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -144,30 +170,30 @@ class HomePage extends StatelessWidget {
   }
 
   Future<void> _showMyDialog(BuildContext context, String str) async {
-  return showDialog<void>(
-    context: context,
-    barrierDismissible: false, // user must tap button!
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('AlertDialog Title'),
-        content: SingleChildScrollView(
-          child: ListBody(
-            children: <Widget>[
-              Text('This is $str'),
-              Text('This msg $str?'),
-            ],
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('AlertDialog Title'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('This is $str'),
+                Text('This msg $str?'),
+              ],
+            ),
           ),
-        ),
-        actions: <Widget>[
-          FlatButton(
-            child: Text('Approve'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
-    },
-  );
-}
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Approve'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
