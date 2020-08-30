@@ -150,6 +150,15 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Web socket page'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/webSocket');
+              },
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
