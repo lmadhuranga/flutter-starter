@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter1/CounterPage.dart';
 import 'package:flutter1/PhotosList.dart';
 import 'package:flutter1/SendData.dart';
+import 'package:flutter1/ThirdPage.dart';
 import 'package:flutter1/ToDoList.dart';
 import 'package:flutter1/FetchHttp.dart';
 import 'package:flutter1/WebSocketPage.dart';
@@ -31,6 +32,7 @@ void main() {
         '/': (context) => HomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => SecondScreen(),
+      '/third': (context) => ThirdPage(),
         '/tabs': (context) => TabsPage(),
         '/counter': (context) => CounterPage(),
         '/shoppinglist': (context) => ShoppingList(

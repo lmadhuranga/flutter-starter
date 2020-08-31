@@ -1,10 +1,12 @@
 import 'dart:developer';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final minwidth = 150.0;
     return Scaffold(
       drawer: Drawer(
         elevation: 16.0,
@@ -66,109 +68,120 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Second Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/second');
-              },
+      body: SingleChildScrollView(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Second Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/second');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Shopping List Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/shoppinglist');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('3rd page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/third');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Tabs Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/tabs');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Shopping List Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/shoppinglist');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Counter Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/counter');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Tabs Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/tabs');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Form Page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/form');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Counter Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/counter');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Todo List'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/todo');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Form Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/form');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Http Fetch Data'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/fetchHttp');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Todo List'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/todo');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Http Send Data'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/sendHttp');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Http Fetch Data'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/fetchHttp');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Photo list page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/photosList');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Http Send Data'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/sendHttp');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Web socket page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/webSocket');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Photo list page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/photosList');
+                },
+              ),
             ),
-          ),
-          ButtonTheme(
-            minWidth: 200.0,
-            child: RaisedButton(
-              child: Text('Write file'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/writeFile');
-              },
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Web socket page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/webSocket');
+                },
+              ),
             ),
-          ),
-        ],
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Write file'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/writeFile');
+                },
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
