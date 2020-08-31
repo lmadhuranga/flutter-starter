@@ -5,6 +5,7 @@ import 'package:flutter1/SendData.dart';
 import 'package:flutter1/ToDoList.dart';
 import 'package:flutter1/FetchHttp.dart';
 import 'package:flutter1/WebSocketPage.dart';
+import 'package:flutter1/WriteFile.dart';
 import 'package:flutter1/shopping/shopping-list.dart';
 import 'package:flutter1/TabsPage.dart';
 import 'shopping/product.dart';
@@ -53,6 +54,7 @@ void main() {
         '/sendHttp': (context) => SendDataHttp(),
         '/photosList': (context) => PhotosListPage(title: 'Photo List Page'),
         '/webSocket': (context) => WebSocketPage(title: 'Web Socket page'),
+        '/writeFile': (context) => WriteFile(),
       },
     ),
   );

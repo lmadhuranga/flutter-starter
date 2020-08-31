@@ -159,6 +159,15 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          ButtonTheme(
+            minWidth: 200.0,
+            child: RaisedButton(
+              child: Text('Write file'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/writeFile');
+              },
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
