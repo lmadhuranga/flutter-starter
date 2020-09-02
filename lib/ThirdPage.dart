@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class ThirdPage extends StatelessWidget {
@@ -9,15 +8,19 @@ class ThirdPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Third Page"),
       ),
-      body: Column(
-        children: [
-          RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-            child: Text('Go back! Home'),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              RaisedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Text('Go back! Home'),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
       persistentFooterButtons: <Widget>[
         RaisedButton(
