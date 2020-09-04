@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/CounterPage.dart';
+import 'package:flutter1/GridePage.dart';
 import 'package:flutter1/PhotosList.dart';
 import 'package:flutter1/SendData.dart';
 import 'package:flutter1/ThirdPage.dart';
@@ -7,6 +8,7 @@ import 'package:flutter1/ToDoList.dart';
 import 'package:flutter1/FetchHttp.dart';
 import 'package:flutter1/WebSocketPage.dart';
 import 'package:flutter1/WriteFile.dart';
+import 'package:flutter1/newUi/NewUi.dart';
 import 'package:flutter1/shopping/shopping-list.dart';
 import 'package:flutter1/TabsPage.dart';
 import 'shopping/product.dart';
@@ -33,6 +35,7 @@ void main() {
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => SecondScreen(),
         '/third': (context) => ThirdPage(),
+        '/newui': (context) => NewUi(title: 'New ui 1',),
         '/tabs': (context) => TabsPage(),
         '/counter': (context) => CounterPage(),
         '/shoppinglist': (context) => ShoppingList(
@@ -57,6 +60,7 @@ void main() {
         '/photosList': (context) => PhotosListPage(title: 'Photo List Page'),
         '/webSocket': (context) => WebSocketPage(title: 'Web Socket page'),
         '/writeFile': (context) => WriteFile(),
+        '/gride': (context) => GridePage(),
       },
     ),
   );

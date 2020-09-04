@@ -92,6 +92,15 @@ class HomePage extends StatelessWidget {
             ButtonTheme(
               minWidth: minwidth,
               child: RaisedButton(
+                child: Text('New ui'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/newui');
+                },
+              ),
+            ),
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
                 child: Text('Shopping List Page'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/shoppinglist');
@@ -176,6 +185,15 @@ class HomePage extends StatelessWidget {
                 child: Text('Write file'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/writeFile');
+                },
+              ),
+            ),
+            ButtonTheme(
+              minWidth: minwidth,
+              child: RaisedButton(
+                child: Text('Gride Page'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/gride');
                 },
               ),
             ),
