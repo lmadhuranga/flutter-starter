@@ -1,5 +1,4 @@
 import 'dart:developer';
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -66,7 +65,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Home Page 1'),
       ),
       body: SingleChildScrollView(
         child: Column(

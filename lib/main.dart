@@ -32,7 +32,7 @@ void main() {
         '/': (context) => HomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => SecondScreen(),
-      '/third': (context) => ThirdPage(),
+        '/third': (context) => ThirdPage(),
         '/tabs': (context) => TabsPage(),
         '/counter': (context) => CounterPage(),
         '/shoppinglist': (context) => ShoppingList(
