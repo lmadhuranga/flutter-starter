@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter1/CounterPage.dart';
+import 'package:flutter1/GridePage.dart';
+import 'package:flutter1/PhotosList.dart';
+import 'package:flutter1/SendData.dart';
+import 'package:flutter1/ThirdPage.dart';
+import 'package:flutter1/ToDoList.dart';
+import 'package:flutter1/FetchHttp.dart';
+import 'package:flutter1/WebSocketPage.dart';
+import 'package:flutter1/WriteFile.dart';
+import 'package:flutter1/newUi/NewUi.dart';
 import 'package:flutter1/shopping/shopping-list.dart';
 import 'package:flutter1/TabsPage.dart';
 import 'shopping/product.dart';
 import 'shopping/shopping-list.dart';
 import 'SecondPage.dart';
 import 'HomePage.dart';
+import 'FormPage.dart';
 
 void main() {
   runApp(
@@ -24,6 +34,8 @@ void main() {
         '/': (context) => HomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => SecondScreen(),
+        '/third': (context) => ThirdPage(),
+        '/newui': (context) => NewUi(title: 'New ui 1',),
         '/tabs': (context) => TabsPage(),
         '/counter': (context) => CounterPage(),
         '/shoppinglist': (context) => ShoppingList(
@@ -33,8 +45,23 @@ void main() {
                 Product(name: 'Chocolate chips'),
               ],
             ),
+        '/form': (context) => FormPage(),
+        '/todo': (context) => TodosScreen(
+              todos: List.generate(
+                20,
+                (i) => Todo(
+                  'Todo $i',
+                  'A description of what needs to be done for Todo $i',
+                ),
+              ),
+            ),
+        '/fetchHttp': (context) => FetchHttp(),
+        '/sendHttp': (context) => SendDataHttp(),
+        '/photosList': (context) => PhotosListPage(title: 'Photo List Page'),
+        '/webSocket': (context) => WebSocketPage(title: 'Web Socket page'),
+        '/writeFile': (context) => WriteFile(),
+        '/gride': (context) => GridePage(),
       },
-
     ),
   );
 }
